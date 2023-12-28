@@ -1,10 +1,10 @@
 package com.everton.wwiiplanes.wwiiplanes.interfaces;
 
-import com.everton.wwiiplanes.wwiiplanes.Planes;
+import com.everton.wwiiplanes.wwiiplanes.model.Planes;
 
 import java.util.List;
 
-public interface PlanesRepository {
+public interface PlanesRepository  {
 
     List<Planes> getPlanesDTO();
 
