@@ -1,13 +1,13 @@
-package com.everton.wwiiplanes.wwiiplanes.usecase;
+package com.everton.wwiiplanes.wwiiplanes.application.usecase;
 
-import com.everton.wwiiplanes.wwiiplanes.model.Planes;
-import com.everton.wwiiplanes.wwiiplanes.interfaces.PlanesRepository;
-import com.everton.wwiiplanes.wwiiplanes.interfaces.PlanesUsecase;
-import com.everton.wwiiplanes.wwiiplanes.repository.PlanesRepositoryImpl;
+import com.everton.wwiiplanes.wwiiplanes.domain.model.Plane;
+import com.everton.wwiiplanes.wwiiplanes.domain.repository.PlanesRepository;
+import com.everton.wwiiplanes.wwiiplanes.application.interfaces.PlanesUsecase;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+//Planes UseCase implementation
 @Service
 public class PlanesUsecaseImpl implements PlanesUsecase {
 
@@ -18,7 +18,7 @@ public class PlanesUsecaseImpl implements PlanesUsecase {
     }
 
     @Override
-    public List<Planes> getPlanes() {
+    public List<Plane> getPlanes() {
         return planesRepository.getPlanesDTO();
     }
 }

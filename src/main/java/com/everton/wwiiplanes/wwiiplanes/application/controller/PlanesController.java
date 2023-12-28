@@ -1,8 +1,8 @@
-package com.everton.wwiiplanes.wwiiplanes.controller;
+package com.everton.wwiiplanes.wwiiplanes.application.controller;
 
 
-import com.everton.wwiiplanes.wwiiplanes.model.Planes;
-import com.everton.wwiiplanes.wwiiplanes.interfaces.PlanesUsecase;
+import com.everton.wwiiplanes.wwiiplanes.domain.model.Plane;
+import com.everton.wwiiplanes.wwiiplanes.application.interfaces.PlanesUsecase;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,9 +20,9 @@ public class PlanesController {
     }
 
     @GetMapping("/getPlanes")
-    public List<Planes> getPlanes(){
+    public List<Plane> getPlanes(){
 
-        List<Planes> planes = planesUsecase.getPlanes();
+        List<Plane> planes = planesUsecase.getPlanes();
         System.out.println(planes.toString());
 
         return planes;
