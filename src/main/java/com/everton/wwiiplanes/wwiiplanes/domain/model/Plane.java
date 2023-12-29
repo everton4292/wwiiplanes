@@ -7,10 +7,10 @@ import jakarta.persistence.*;
 public class Plane {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY) private Long id;
     @Column private String name;
-    @Column private String weapons;
     @Column private Country country;
     @Column private String role;
     @Column private String year;
+    @ManyToOne private Weapons weapons;
 
     public Plane() {}
 
@@ -30,11 +30,11 @@ public class Plane {
         this.name = name;
     }
 
-    public String getWeapons() {
+    public Weapons getWeapons() {
         return weapons;
     }
 
-    public void setWeapons(String weapons) {
+    public void setWeapons(Weapons weapons) {
         this.weapons = weapons;
     }
 
